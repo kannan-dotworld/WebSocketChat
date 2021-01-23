@@ -1,17 +1,14 @@
-package dev.dotworld.websocketchat
+package dev.dotworld.websocket
 
 import android.Manifest
 import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import okhttp3.*
-import okio.ByteString
 
 
 open class MainActivity : AppCompatActivity() {
