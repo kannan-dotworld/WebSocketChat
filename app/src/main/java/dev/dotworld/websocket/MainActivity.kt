@@ -28,19 +28,7 @@ open class MainActivity : AppCompatActivity() {
         textView = findViewById(R.id.textView1)
         send = findViewById(R.id.send1)
         send?.setOnClickListener { ShowSMS() }
-
         alertDialog = AlertDialog.Builder(this)
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                0
-            )
-        }
     }
 
     override fun onResume() {
@@ -48,9 +36,6 @@ open class MainActivity : AppCompatActivity() {
        initWS()
         super.onResume()
     }
-
-
-
     private fun ShowSMS() {
         Log.d(TAG, "showAlart: ")
         alertDialog?.setTitle("SMS")
